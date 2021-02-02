@@ -1,0 +1,49 @@
+{% extends "base_bootstrap.html" %}
+{% block navbar %}
+{% load app_tags %}
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">{{ settings.APP_NAME }}</a>
+    </div>
+    <!-- https://stackoverflow.com/questions/22047251/django-dynamically-get-view-url-and-check-if-its-the-current-page -->
+    <ul class="nav navbar-nav">
+      {% url 'about_me' as ab %}
+      <li {% if request.get_full_path == ab %}class="active"{% endif %}>
+          <a href="{% url 'port:about_me' %}">About me</a></li>
+
+      {% url 'projects' as proj %}
+      <li {% if request.get_full_path == proj %}class="active"{% endif %}>
+          <a href="{% url 'port:projects' %}">Projects</a></li>
+
+      {% url 'contact' as con %}
+      <li {% if request.get_full_path == con %}class="active"{% endif %}>
+          <a href="{% url 'port:contact' %}">Contact</a></li>
+
+      {% url 'skills' as sk %}
+      <li {% if request.get_full_path == sk %}class="active"{% endif %}>
+          <a href="{% url 'port:skills' %}">Skills</a></li>
+
+      {% url 'education' as ed %}
+      <li {% if request.get_full_path == ed %}class="active"{% endif %}>
+          <a href="{% url 'port:education' %}">Education</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                <img style="width: 25px;" src="{{ user|gravatar:60 }}"/><b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'logout' %}?next={% url 'port:about_me' %}">Logout</a></li>
+            </ul>
+        </li>
+        {% else %}
+        <li>
+        <a href="{% url 'login' %}?next={% url 'port:about_me' %}">Login</a>
+        </li>
+        {% endif %}
+    </ul>
+  </div>
+</nav>
+{% endblock %}
