@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def PortListView(request):
-    return render(request,"portfol/about.html")
+    return render(request,'portfol/about.html')
 
 
 def PortProjectView(request):

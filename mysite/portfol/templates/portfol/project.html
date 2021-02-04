@@ -1,1 +1,30 @@
 {% extends "port_menu.html" %}
+{% block content %}
+<link rel='stylesheet' link href="/static/project.css">
+<div class="project-section">
+    <h1>PROJECTS</h1>
+</div>
+
+<div class="card">
+  <img src="static/advertising-word-block.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Advertisement Application using Django</b></h4>
+    <p>A CRUD application using Django,Html,CSS,Java Script,SQL to add,
+    <br>manage advertisements</p>
+    <p>Users have the option to favorite ads and comment on it.</p>
+    <a href="https://github.com/KiranVK98/django_projects/tree/master/mysite/ads" target="_blank"><i
+                      class="fa fa-github"></i></a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="static/nyt.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Scraping the content of New York Times Website</b></h4>
+    <p>Project to scrape contents of a popular news website using HTML <br> parser-Beautiful Soup and python. </p>
+    <a href="https://github.com/KiranVK98/web-scrap" target="_blank"><i
+                      class="fa fa-github"></i></a>
+  </div>
+</div>
+
+{% endblock %}

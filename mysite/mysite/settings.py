@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Used for a default title
-APP_NAME = 'KiranList'   # Add
+APP_NAME = 'Kiran'   # Add
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-
+STATIC_ROOT = "/home/kiranvk98/django_projects/mysite/portfol/static"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'social_django',
     'home.apps.HomeConfig',
-    'ads.apps.AdsConfig',
+    'portfol.apps.PortfolConfig',
 
     # Sample Applications - don't copy
 ]

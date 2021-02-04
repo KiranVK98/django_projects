@@ -11,3 +11,4 @@ urlpatterns=[
     path('skills', PortSkillsView, name='skills'),
     path('education', PortEducationView, name='education'),
 ]
+
