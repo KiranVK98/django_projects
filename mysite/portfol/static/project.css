@@ -33,11 +33,12 @@
   /* Same trick as previously used to make circles */
   box-sizing: border-box;
   width     : 150px;
-  height    : 150px;
+  height    : 170px;
   padding   : 80px 1em 0 1em;
 
   /* We make room for the "ears" of our cloud */
   margin    : auto;
+  margin-top:5px;
 
   position: relative;
 
@@ -98,4 +99,28 @@
      remains flat, we must make the bottom left
      corner of the right ear square. */
   border-bottom-left-radius: 0;
+}
+
+.fancy > p {
+    font-weight:bold;
+    color:Black;
+}
+
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: #FF6F61;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
